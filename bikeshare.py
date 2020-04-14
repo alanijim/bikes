@@ -108,7 +108,7 @@ def day_info(d):
         return 'none'
 
 def load_data(city):
-    # Loads data for the specified city
+    # Loads data for a specified city
     print('\nLoading the data... .. .. ..\n')
     df = pd.read_csv(CITY_DATA[city])
 
@@ -133,13 +133,13 @@ def time_filters(df, time, month, week_day, md):
     df - dataframe to be used for final calculation
     '''
     print('Data loaded. Now computing statistics... \n')
-    #Filter by Month
+    #Filter city datat by Month
     if time == 'month':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
         df = df[df['month'] == month]
 
-    #Filter by day of week
+    #Filter city data by day of week
     if time == 'day_of_week':
         days = ['Monday', 'Tuesday', 
         'Wednesday', 'Thursday', 
