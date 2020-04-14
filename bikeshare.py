@@ -192,7 +192,7 @@ def hour_freq(df):
 
 def ride_duration(df):
     '''
-    What is the total ride duration and average ride duration?
+    What is the total ride duration and average ride duration time?
     Result:
         tuple = total ride duration, average ride durations
     '''
@@ -210,7 +210,7 @@ def ride_duration(df):
     return total_ride_time, avg_ride_time
 
 def stations_freq(df):
-    '''What is the most popular start station and most popular end station?
+    '''What is the most popular start and end station?
     '''
     print("\nThe most popular start station is: ")
     start_station = df['Start Station'].value_counts().reset_index()['index'][0]
